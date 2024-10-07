@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of Birth Predictor</title>
+    <script>
+        function predictDayOfBirth() {
+            const dateOfBirth = new Date(document.getElementById('dob').value);
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayOfBirth = daysOfWeek[dateOfBirth.getDay()];
+            document.getElementById('result').innerText = `You were born on a ${dayOfBirth}.`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Day of Birth Predictor</h1>
+    <label for="dob">Enter your Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+    <button onclick="predictDayOfBirth()">Predict Day of Birth</button>
+    <p id="result"></p>
+</body>
+</html>
